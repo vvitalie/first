@@ -1,0 +1,541 @@
+/*--------------------------------------------------------------
+Bring on the SUSY power!
+--------------------------------------------------------------*/
+
+@import "susy";
+
+/*--------------------------------------------------------------
+Functions & Mixins
+--------------------------------------------------------------*/
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+@function px-rem( $px ) {
+	@return ($px / 16)+rem;
+}
+@function pxrem( $px ) {
+	@return ($px / 16)+rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// input placeholder mixin
+@mixin input_placeholder( $element, $color ) {
+	#{$element}::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	#{$element}:-moz-placeholder { /* Firefox 18- */
+		color: $color;
+	}
+
+	#{$element}::-moz-placeholder {  /* Firefox 19+ */
+		color: $color;
+	}
+
+	#{$element}:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+//transition
+@mixin transition($element:all, $duration:0.35s) {
+	transition:$element $duration;
+}
+
+//border radius
+@mixin border-radius($radius) {
+	-moz-border-radius:$radius;
+  	-webkit-border-radius:$radius;
+	-o-border-radius:$radius;
+	-ms-border-radius:$radius;
+	border-radius:$radius;
+}
+
+
+
+/*--------------------------------------------------------------
+Normalize
+--------------------------------------------------------------*/
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+
+html {
+font-size:px-rem(16);
+height: 100%;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+
+
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+
+b, strong {font-weight: 500;}
+abbr[title] {border-bottom: 1px dotted;}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a img, img {
+-ms-interpolation-mode: bicubic;
+border: 0;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+input, textarea, button, select {
+margin: 0;
+font-size: 100%;
+line-height: normal;
+vertical-align: baseline;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+cursor: pointer;
+-webkit-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input { line-height: normal;}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {-webkit-appearance: none;}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input{border-radius: 0}
+textarea {overflow: auto;font: inherit;}
+img::selection {
+background: transparent;
+}
+img::-moz-selection {
+background: transparent;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+
+abbr, acronym {
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
+
+mark, ins {
+	background: $color__background-ins;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+
+
+
+/*--------------------------------------------------------------
+Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+* {
+	outline: 0;
+}
+
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+body{
+ font-family: $font__main;
+ font-size:$font__size;
+ line-height: $font__line-height-body;
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+Navigation
+--------------------------------------------------------------*/
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	& .nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	& .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+
+
+/*--------------------------------------------------------------
+Alignments
+--------------------------------------------------------------*/
+.alignright {
+	float:right;
+	margin:0 0 px-rem(20) px-rem(20);
+}
+
+.alignleft {
+	float:left;
+	margin:0 px-rem(20) px-rem(20) 0;
+}
+
+.aligncenter {
+	display:block;
+	margin:0 auto px-rem(20);
+}
+
+/*--------------------------------------------------------------
+Clearings
+--------------------------------------------------------------*/
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,.clearfix:after,.clearfix:before {
+	@include clearfix;
+}
+
+.entry-content:after,.clear,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after,.clearfix:after {
+	@include clearfix-after;
+}
+
+
+/*--------------------------------------------------------------
+Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin-bottom: px-rem(50);
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+
+/*--------------------------------------------------------------
+Content
+--------------------------------------------------------------*/
+
+.td{display: table-cell;}
+.table{display: table;}
+.white{color:#fff;a{color:#fff}}
+.img{overflow: hidden;display: block;img{min-width: 100%;min-height: 100%;height: auto;width: auto;max-width: none}}
+.fl{float: left;} .fr{float: right;}
+
+
+/*----- Asides -----*/
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/*----- Comments -----*/
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	display: block;
+}
+
+/*----- Posts and pages -----*/
+
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+
+
+/*--------------------------------------------------------------
+Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+.wp-caption {
+	margin-bottom: px-rem(24);
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		@include center-block;
+	}
+
+	.wp-caption-text {
+		margin: 0.8075em 0;
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.gallery {
+	margin-bottom: px-rem(24);
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+
+	.gallery-columns-2 & {
+		max-width: 50%;
+	}
+
+	.gallery-columns-3 & {
+		max-width: 33.33%;
+	}
+
+	.gallery-columns-4 & {
+		max-width: 25%;
+	}
+
+	.gallery-columns-5 & {
+		max-width: 20%;
+	}
+
+	.gallery-columns-6 & {
+		max-width: 16.66%;
+	}
+
+	.gallery-columns-7 & {
+		max-width: 14.28%;
+	}
+
+	.gallery-columns-8 & {
+		max-width: 12.5%;
+	}
+
+	.gallery-columns-9 & {
+		max-width: 11.11%;
+	}
+}
+
+.gallery-caption {
+	display: block;
+}

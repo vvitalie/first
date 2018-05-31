@@ -1,0 +1,10 @@
+@mixin animate($duration, $field...) {
+    -webkit-transition-property: $field;
+    -moz-transition-property: $field;
+    -o-transition-property: $field;
+    transition-property: $field;
+    -webkit-transition-duration: $duration;
+    -moz-transition-duration: $duration;
+    -o-transition-duration: $duration;
+    transition-duration: $duration;
+}

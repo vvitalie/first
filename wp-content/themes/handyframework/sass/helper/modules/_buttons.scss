@@ -1,0 +1,61 @@
+/*buttons*/
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.comments-link a,
+.edit-link a,
+.ginput_container_post_image {
+    @include box();
+    border: 0;
+    background: $brand-color-secondary;
+    color: $brand-color-main!important;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: $font-main;
+    font-weight: 400;
+    height: auto;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 7px;
+    &:hover,
+    &:focus {
+        background: $brand-color-secondary - 15;
+        color: $brand-color-main;
+    }
+    &.simple {
+        background: #f4f4f4;
+        &:hover,
+        &:focus {
+            background: #f4f4f4 - 15;
+            color: $brand-color-main;
+        }
+    }
+}
+.button-white,
+.button-alt,
+button.button-alt,
+input[type="button"].button-alt,
+input[type="reset"].button-alt,
+input[type="submit"].button-alt {
+    @include animate(300ms, background, color);
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 25px;
+    color: $brand-color-main;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-family: $font-main;
+    font-weight: 400;
+    &:hover,
+    &:focus {
+        background: $brand-color-secondary - 15;
+        color: $brand-color-main;
+    }
+}

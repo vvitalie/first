@@ -1,0 +1,47 @@
+/****************BUTTONS STYLES*****************/
+
+.button {
+	width:100%;
+	margin-right:0;
+	display:block;
+}
+
+/**********************GRID STYLES************************/
+
+.col-4 {
+	@include span(6 of 6);
+	margin-bottom:px-rem(20);
+}
+
+.innerWrapper {
+	@include span(6 of 6);
+}
+
+/*************************HTML-BODY STYLES****************/
+
+.leftContent,
+.rightContent,
+.two-column_wrapper ul.gform_column.s1,
+.two-column_wrapper ul.gform_column.s2 {
+	width: 100% !important;
+	min-width: 100% !important;
+	max-width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+
+.mainMenu {
+	display:none;
+}
+
+.mobileLink {
+	display:block;
+}
+
+
+.cols-2{
+	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+	-moz-column-count: 1; /* Firefox */
+	column-count: 1;
+}

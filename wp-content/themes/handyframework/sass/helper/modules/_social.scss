@@ -1,0 +1,41 @@
+@mixin social-links($container-size: 40px, $icon-size: 20px, $item-margin-size: 10px, $border-size: 2px, $border-color: #fff, $icon-color: #fff, $icon-color-hover: #19325B) {
+    .socialLinks {
+        float: right;
+        ul {
+            @include reset-list();
+            @include inline-list();
+        }
+        li {
+            @include inline-item($icon-size);
+            margin-left: $item-margin-size;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        a {
+            @include animate(300ms, background, border-color, color);
+            display: block;
+            width: $container-size;
+            height: $container-size;
+            border-radius: $container-size;
+            border: $border-size solid $border-color;
+            position: relative;
+            color: $icon-color;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $icon-color-hover;
+                border-color: $icon-color;
+                background: $icon-color;
+            }
+        }
+        .fa {
+            @include position-absolute(center, 0, center, 0);
+            display: block;
+            width: $icon-size;
+            height: $icon-size;
+            text-align: center;
+        }
+    }
+}
+

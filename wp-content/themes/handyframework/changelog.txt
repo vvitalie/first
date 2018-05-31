@@ -1,0 +1,33 @@
+05.03.16 - Moved Google Fonts from CSS to header
+05.03.16 - Moved best4u_login_style.css to /css
+05.03.16 - Added flexible content blocks (WYSIWYG only)
+14.04.16 - Fixed logo image width and height
+14.04.16 - Extended .mainMenu to 3 level menu
+14.04.16 - Changed theme screenshot per Ricardo's request
+14.04.16 - Removed PHP Code Widget due to security issues
+14.04.16 - Merged all button styles into one
+14.04.16 - Implemented focus on inputs and textareas
+14.04.16 - Implemented jquery focuspoint on images. must be tested by designers!!!
+14.04.16 - Implemented WP editor shortcodes + quick tags for better seo and content management
+14.04.16 - Moved mobileMenu to footer. It shows when page is loading slow.
+14.04.16 - Implemented 2 routes email sending to default contact form (one goes to e-mail specified in WP admin, second one goes to email inputed in form, if checkbox is checked)
+15.04.16 - Implemented use sidebar options, included ad CSS class in body tag
+15.04.16 - Moved Shortcodes to /inc folder
+17.04.16 - Installed auto update plugin for WP core and plugins
+17.04.16 - Merged sidebar condition with Contact page template
+21.04.16 - WP_DEBUG_LOG option added, for easier debugging
+21.04.16 - Added custom loop shortcode with templates for WP_QUERY, BUT without pagination
+21.04.16 - Moved admin area styling to one kind of CDN folder http://best4u.md/admin-login/admin.css
+21.04.16 - custom loop shortcode has now next/prev pagination ([b4uloop the_query="post_type=post&posts_per_page=1" template="test-loop"])
+21.04.16 - Added credits function to functions.php for easier NL/BE credits assigning
+21.04.16 - Added disc list style to mainContent ul li
+21.04.16 - Added Syntax Highlight for easier code editing in WP editor
+22.04.16 - Removed Flexible content. Waiting for Ricardo's request of custom page builder.
+10.05.16 - Fixed major bug in loop shortcode.
+12.05.16 - Added Regenerate Thumbnails and Duplicate Post plugins 
+12.05.16 - Added Disclaimer and Algemene voorwarden and made a footer menu just in case. 
+14.05.16 - CSS modifications
+15.05.16 - Added Custom Sidebars plugin
+09.06.16 - Added Adminize plugin for hiding features from client. But it was not configured and activated.
+
+

@@ -1,0 +1,146 @@
+body.sidebarNo .leftContent {
+    width: 100% !important;
+}
+
+nav.mainMenu {
+    z-index: 999;
+    position: relative;
+}
+
+.coacheItem.first {
+    width: 50%;
+}
+
+@media (max-width: 990px) {
+    .coacheItem, .coacheItem.first {
+        width: 100%;
+    }
+}
+
+.coacheItemImage img {
+    height: auto;
+    width: 100%;
+}
+
+.gRow .columnContent6 {
+    display: none;
+}
+
+.gRow .columnContent6:first-of-type {
+    display: block;
+}
+
+.home .aboutProject, .home .districtMap {
+    background-color: #fff;
+}
+
+/*valeria*/
+@media screen and (min-width: 992px) {
+    .coacheItemDescription {
+        padding-left: 35px;
+        padding-right: 55px;
+    }
+}
+
+/* Intakeformulier - Ricardo */
+.gf_step_label {
+    display: none;
+}
+
+.gf_step {
+    background: white;
+    display: inline-block;
+    padding: 1em 2em;
+    border-radius: 10em;
+    line-height: 0;
+    border: 2px solid #f9cb01;
+    margin-right: 0.5em;
+}
+
+.gf_step_active {
+    background: #19325b;
+    border: #19325b;
+    color: white;
+}
+
+.thumbnailImage img {
+    float: right;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 670px) and (min-width: 320px) {
+    .thumbnailImage img {
+        float: none;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+}
+
+.post-type-archive-adviseurs .coacheItemDescription p {
+    height: 175px;
+}
+
+.socialLinks {
+    display: none;
+}
+
+.test select[data-dkcacheid] {
+    display: block !important;
+}
+
+.chosen-container-single .chosen-single {
+    padding: 10px 50px 10px 10px !important;
+    height: 50px !important;
+    line-height: 30px !important;
+    border-radius: 3px !important;
+    font-size: 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px !important;
+    background: #fff !important;
+    border: none !important;
+}
+
+.chosen-container-single .chosen-single div b {
+    background: none !important;
+    margin-right: 30px;
+}
+
+.chosen-container-single .chosen-single div b:before {
+    border: 0;
+    color: #19325b;
+    font-family: 'FontAwesome';
+    width: 17px;
+    height: 17px;
+    font-size: 17px;
+    content: "\f078";
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 25px;
+    display: block;
+    line-height: 40px;
+}
+
+.chosen-container .chosen-container-single {
+    width: 285px !important;
+}
+
+.chosen-container-single .chosen-single div {
+    top: 5px !important;
+    right: 20px !important;
+}
+
+.chosen-container-single .chosen-single span {
+    color: #19325b !important;
+}
+
+.sf-field-tag .dk-select {
+    display: none;
+}
+
+.topPromoImage:after {
+    background: url('data:image/false;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAACCAYAAAC5fcGbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkVDMjdEN0UxMkYxMTFFNzhDNTRERDA3MUMyQzJEQkYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkVDMjdEN0QxMkYxMTFFNzhDNTRERDA3MUMyQzJEQkYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTU0QUM5ODIwRkEzMTFFN0EzQjlFM0IzODVCMzFDMjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTU0QUM5ODMwRkEzMTFFN0EzQjlFM0IzODVCMzFDMjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6ClYsHAAACLUlEQVR42uxaW07EMBCLF4mD8Lj/N2dBHIUagVipVEnGnnSBj/FPu7tpZjwPN20Wl4enl9bafSsUCoVCoVAoqOD3Ebvz2VgczjmYb2bL8Sv6ngucZ/xpxm7bxWb/234enMCLibixk7sox5zMFfHAgf/sczQ3E/xp5pO7HLYD/5mvSl1FY9QeGo3hQi3QrMGIkxN3mnYx4azaoNGDFGOrcqbBHcZ4JYZcrCWe5CuNnqWoLW6PbjfMp5sbLvZFRvOyfrs92hZ8ifJJQaM5iJG7Ljg7Nr31RlTrrq4qvZThfItrkLj3ZO55WR/VdcdmrHNWeapaqa5flX7K9D4WcpXl0qsrNRcr+vabc0bPYbNnOsvn97fXr/F3j8+4nhcKhUKh8Ne4VAgKhUKhUCgUbCibgvuxPFy3x/7FxHEz9PobBtf2bKEz/8h/BbOXwKMXSE4c2bGBTuycvET8Vb4QufVyDNEPdo5o+ia4YgPCNWj9l2SRPUxiEflBI384Iccwxyg5OPYcRJsI7Cm11pK9QaPPYdYbTuQA0yYGuqT4rmwwOxoyijvEup/lqRdHJvxReGzCNW4+GfQMhb6a1YCqW0jqBsWxvQ0VNe+r972ZzkDoXUV3XS2HqTtMrLdGm6bun8OQGA/hPkkjd9GaKfI50z8reuFqCybrvpW1qKJRMH2m0E8wYpPZ/B3VmVtDigZjYe4ZR0dD1A3a1drkCVx/4Lr5+3msx+VCoVAo/Ad8CDAAl4pnajLZ+jsAAAAASUVORK5CYII=');
+}
+.archive .coachesList{
+    display: none;
+}

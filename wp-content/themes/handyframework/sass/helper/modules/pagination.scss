@@ -1,0 +1,59 @@
+.navigation{
+    @media #{$small-up} {
+        float: right;
+    }
+    @media #{$small-down} {
+        width: 100%;
+        clear: both;
+        padding-top: 6px;
+        display: table;
+    }
+    .page-numbers{
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 600;
+        color: #053c46;
+        padding: 11px 14px;
+        border-right: 1px solid #d0d9de;
+        border-top: 1px solid #d0d9de;
+        border-bottom: 1px solid #d0d9de;
+        float: left;
+        &:hover{
+            background: #00a197;
+            color: #ffffff;
+            border: 1px solid #00a197;
+            border-left: 0;
+        }
+        &.current{
+            background: #00a197;
+            color: #ffffff;
+            border: 1px solid #00a197;
+        }
+        &.dots{
+            &:hover{
+                background: #ffffff;
+                color: #053c46;
+                border-color: #d0d9de;
+            }
+        }
+        &.prev,
+        &.next{
+            background: #f2f6f8;
+            &:hover{
+                background: #00a197;
+                color: #ffffff;
+                border: 1px solid #00a197;
+                border-left: 0;
+            }
+        }
+        &.prev{
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-left: 1px solid #d0d9de;
+        }
+        &.next{
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+}

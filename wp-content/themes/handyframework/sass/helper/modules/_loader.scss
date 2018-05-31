@@ -1,0 +1,11 @@
+.sk-three-bounce {
+    @include animate(500ms, opacity);
+    background: #19325b;
+    opacity: 1;
+    visibility: visible;
+    &.loaded {
+        opacity: 0;
+        visibility: hidden;
+        left: -99999px;
+    }
+}

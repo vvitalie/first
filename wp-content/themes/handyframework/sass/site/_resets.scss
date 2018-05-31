@@ -1,0 +1,160 @@
+/**********************GRID STYLES************************/
+.span-12 {
+  @include span(12);
+}
+
+.span-11 {
+  @include span(11);
+}
+
+.span-10 {
+  @include span(10);
+}
+
+.span-9 {
+  @include span(9);
+}
+
+.span-8 {
+  @include span(8);
+}
+
+.span-7 {
+  @include span(7);
+}
+
+.span-6 {
+  @include span(6);
+}
+
+.span-5 {
+  @include span(5);
+}
+
+.span-4 {
+  @include span(4);
+}
+
+.span-3 {
+  @include span(3);
+}
+
+.span-2 {
+  @include span(2);
+}
+
+.span-1 {
+  @include span(1);
+}
+
+.col-4 {
+  @include span(3);
+}
+
+// .span-last {
+// 	float:right;
+// }
+
+/*--------------------------------------------------------------
+Lists
+--------------------------------------------------------------*/
+ul {
+  list-style: disc;
+  margin: 0 0 20px 20px;
+}
+
+ol {
+  list-style: decimal;
+  margin: 0 0 20px 20px;
+}
+
+ul li {
+  list-style: disc inside;
+}
+
+p {
+  padding-bottom: $paragraph_padding_bottom;
+  &:last-of-type{
+    padding-bottom: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color__link;
+  @include transition(background, 0.3s);
+  &:hover{
+    color: $color__link-hover;
+  }
+}
+
+form, input, textarea, button, select {
+  font-family: inherit;
+}
+
+
+$color__heading: #902d25;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  @include font($font__headings, $semibold);
+  color: $color__heading;
+}
+
+h1, .h1 {
+  font-size: 35px;
+  line-height: 38px;
+  margin-bottom: 25px;
+}
+
+h2, .h2 {
+  font-size: 32px;
+  line-height: 34px;
+  margin-bottom: 25px;
+}
+
+h3, .h3 {
+  font-size: 27px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+h4, .h4 {
+  font-size: 25px;
+  line-height: 27px;
+  margin-bottom: 22px;
+}
+
+h5, .h5 {
+  font-size: 22px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+h6, .h6 {
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.cols-2{
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 40px;
+}
+
+.flxmap-container{
+  width: 100% !important;
+}
+
+@mixin image_center{
+  position: absolute;
+  margin: auto;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+}

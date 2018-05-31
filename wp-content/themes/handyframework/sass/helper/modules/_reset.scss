@@ -1,0 +1,41 @@
+body {
+    font-family: $font-main;
+    font-weight: 300;
+    color: $brand-color-gray;
+}
+
+/*for fileds and buttons styles*/
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password],
+input[type=time],
+input[type=url],
+button,
+select,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+img {
+    vertical-align: top;
+}
+textarea {
+    overflow-y: auto;
+    vertical-align: top;
+}
+a {
+    color: $brand-color-link;
+}
+
+.fullWidth {
+    width: 100%;
+    max-width: none;
+}

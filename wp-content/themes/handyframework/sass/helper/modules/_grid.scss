@@ -1,0 +1,99 @@
+html {
+    height: 100%;
+    &.is-fancybox {
+        height: auto;
+        body {
+            height: auto;
+        }
+    }
+}
+.mm-page {
+    //overflow: hidden;
+    @media #{$large-down} {
+        min-height: 100%;
+        overflow: hidden;
+    }
+    @media #{$large-up} {
+        height: 100%;
+    }
+}
+body {
+    height: 100%;
+}
+.mainContainer {
+    height: 100%;
+}
+.mainContainer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.mainContent {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.mainFooter,
+.mainHeader {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+}
+.gRow {
+    @media #{$small-down} {
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
+    &::after {
+        @include clear();
+    }
+}
+
+$mobile: 6;
+$tablet: 8;
+$desktop: 12;
+
+//@media #{$xsmall-up} {
+//    @for $i from 1 through $mobile {
+//        .gXsmall_#{$i} {
+//            @include span($i of $mobile);
+//        }
+//    }
+//}
+//
+//@media #{$small-up} {
+//    @for $i from 1 through $mobile {
+//        .gSmall_#{$i} {
+//            @include span($i of $mobile);
+//        }
+//    }
+//}
+//@media #{$medium-up} {
+//    @for $i from 1 through $tablet {
+//        .gMedium_#{$i} {
+//            @include span($i of $tablet);
+//        }
+//    }
+//}
+//@media #{$large-up} {
+//    @for $i from 1 through $tablet {
+//        .gLarge_#{$i} {
+//            @include span($i of $tablet);
+//        }
+//    }
+//}
+//@media #{$xlarge-up} {
+//    @for $i from 1 through $desktop {
+//        .gXlarge_#{$i} {
+//            @include span($i of $desktop);
+//        }
+//    }
+//}

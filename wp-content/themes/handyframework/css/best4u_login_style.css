@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+.login{
+	font-family: Roboto, sans-serif;
+	color: #495057;
+
+}
+*{
+	font-weight: 300 !important;
+}
+.loginContentLeft {
+	width: 36%;
+	height: 100%;
+	position: relative;
+	background-image: url(../images/login-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+
+}
+.lContent{
+	position: absolute;
+	left: 60px;
+	bottom: 50px;
+	color: #fff;
+	padding-right: 20px;
+	box-sizing: border-box;
+	width: calc(100% - 60px);
+}
+.lContent p{
+	line-height: 26px !important;
+}
+.lContent h3{
+	font-size: 24px;
+	line-height: normal;
+	margin-bottom: 25px;
+}
+
+.lCms{
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.lCms img{
+	max-width: 250px;
+	height: auto;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+
+.lIm{
+	font-size: 14px;
+}
+.lIm img{
+	height: auto;
+	width: 100%;
+	max-width: 215px;
+}
+.headerTitle{
+	font-size: 32px;
+	color: #868e96;
+}
+#login{
+	padding-top: 11%;
+	height: 100%;
+	width: 64%;
+	float: right;
+	background-color: #fff;
+	padding-left: 150px;
+	box-sizing: border-box;
+}
+#login > h1{
+	display: none;
+}
+#login h1.headerTitle{
+	display: block;
+	text-align: left;
+	margin-bottom: 25px;
+	line-height: normal;
+}
+#loginform,
+#lostpasswordform{
+	width: 100%;
+	max-width: 380px;
+	padding: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.login form .input,
+.login input[type=text]{
+	background-color: #fff;
+	height: 46px;
+	margin: 10px 0 30px;
+	-webkit-appearance: none;
+	border-radius: 3px;
+	font-size: 16px;
+	padding-left: 20px;
+
+}
+.login form .input:focus,
+.login input[type=text]:focus{
+	border: solid 1px #ff8f00 !important;
+	box-shadow: none !important;
+
+}
+.forgetmenot{
+	position: relative;
+}
+.forgetmenot input{
+	float: left;
+	visibility: hidden;
+}
+
+.forgetmenot input[type=checkbox]:checked + label:after{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #FF8F00;
+	border: solid 1px #F08C00;
+	padding: 1px;
+	border-radius: 3px;
+}
+.forgetmenot label:after{
+	content: "";
+	display: block;
+	background-color: white;
+	position: absolute;
+	border: solid 1px #dee2e6;
+	top: 0;
+	width: 20px;
+	height: 20px;
+	padding: 1px;
+	border-radius: 3px;
+}
+
+.login form .forgetmenot label{
+	line-height: 24px;
+	margin-left: 20px;
+	font-size: 13px;
+	color: #adb5bd;
+}
+.login #backtoblog a,
+.login #nav a{
+	color: #adb5bd;
+}
+.login label{
+	font-size: 18px;
+}
+#login form p.submit{
+	clear: both;
+	display: block;
+}
+.wp-core-ui .button-group.button-large .button,
+.wp-core-ui .button.button-large{
+	height: 48px;
+	background-color: #ff8f00;
+	border: 0;
+	border-radius: 3px;
+	text-shadow: none;
+	font-size: 18px;
+	padding: 0 45px;
+	float: left;
+	box-shadow: none !important;
+}
+.login #nav{
+	padding-left: 0;
+}
+#backtoblog{
+	display: none;
+}
+
+#login form p.forgetmenot{
+	margin-bottom: 30px;
+	display: block;
+}
+@media all and (max-width: 1024px){
+	#login{
+		padding-left: 40px;
+	}
+}
+@media all and (max-width: 768px) {
+	.loginContentLeft{
+		display: none;
+	}
+	#login{
+		width: 100%;
+		padding: 0 20px;
+	}
+	#loginform,
+	#lostpasswordform{
+		margin: 0 auto;
+	}
+	#login h1.headerTitle,
+	.login #nav{
+		text-align: center;
+	}
+}

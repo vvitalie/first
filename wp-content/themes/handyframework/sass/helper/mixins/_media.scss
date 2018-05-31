@@ -1,0 +1,21 @@
+///@media
+//up - down
+$xsmall-down: "screen and (max-width: 479px)";
+$small-down: "screen and (max-width: 767px)";
+$medium-down: "screen and (max-width: 991px)";
+$large-down: "screen and (max-width: 1024px)";
+$xlarge-down: "screen and (max-width: 1199px)";
+
+//down - up
+$xsmall-up: "screen and (min-width: 480px)";
+$small-up: "screen and (min-width: 768px)";
+$medium-up: "screen and (min-width: 992px)";
+$large-up: "screen and (min-width: 1025px)";
+$xlarge-up: "screen and (min-width: 1200px)";
+
+//range
+$small-range: "screen and (min-width: 480px) and (max-width: 767px)";
+$medium-range: "screen and (min-width: 768px) and (max-width: 991px)";
+$large-range: "screen and (min-width: 992px) and (max-width: 1024px)";
+$xlarge-range: "screen and (min-width: 1025px) and (max-width: 1199px)";
+$tablet-range: "screen and (min-width: 768px) and (max-width: 1024px)";

@@ -1,0 +1,199 @@
+.mainHeader {
+    .centerDiv {
+        max-width: 1820px;
+    }
+    .siteLogo {
+        padding: 29px 0;
+        position: relative;
+        z-index: 2;
+        width: 182px;
+        @media #{$small-down} {
+            padding: 16px 0;
+            width: 112px;
+        }
+        a {
+            display: block;
+            overflow: hidden;
+            color: $brand-color-main;
+        }
+        img {
+            width: 100%;
+            float: left;
+        }
+    }
+    .logoTitle {
+        color: $brand-color-main;
+        font-size: 30px;
+        line-height: 1.33em;
+        font-weight: 600;
+        font-family: $font-main;
+        float: left;
+        padding: 15px 0 0 24px;
+        @media #{$small-down} {
+            font-size: 23px;
+            padding: 6px 0 0 24px;
+        }
+    }
+    .headerQuestion {
+        float: right;
+        padding-top: 36px;
+        position: relative;
+        z-index: 1000;
+        @media all and (max-width:1270px) {
+            display: none;
+        }
+    }
+    .mainMenu {
+        text-align: center;
+        clear: both;
+        top: -77px;
+        position: relative;
+        width: calc(100% - 564px);
+        margin: auto;
+        @media all and (max-width:1690px) {
+            width: calc(100% - 430px);
+        }
+        @media all and (max-width:1270px) {
+            display: none;
+        }
+        a {
+            color: $brand-color-main;
+        }
+        > ul {
+            @include reset-list();
+            @include inline-list();
+            float: none;
+            -ms-box-orient: horizontal;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            @media screen and (max-width: 1699px) {
+                text-align: center;
+            }
+            @media screen and (max-width: 1099px) {
+                text-align: center;
+            }
+            > li {
+                @include inline-item(20px);
+                float: none;
+                @media screen and (min-width: 1400px) {
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+                &:hover {
+                    > a {
+                        color: $brand-color-secondary;
+                    }
+                }
+                > a {
+                    color: $brand-color-main;
+                    font-size: 20px;
+                    line-height: 2em;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-family: $font-main;
+                    display: block;
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $brand-color-secondary;
+                    }
+                }
+                &.current-menu-item {
+                    > a {
+                        color: $brand-color-secondary;
+                    }
+                }
+                @media screen and (max-width: 1399px) {
+                    margin-left: 0;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+            @media screen and (max-width: 1200px) {
+                font-size: 16px;
+                > li {
+                    margin-left: 0;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    > a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            top: -71px;
+        }
+        .sub-menu {
+            box-shadow: rgba(0, 0, 0, 0.3) 0 2px 3px;
+            text-align: left;
+            padding: 10px 0 15px;
+            > li {
+                > a {
+                    display: block;
+                    padding: 3px 15px;
+                    font-family: $font-main;
+                    font-weight: 600;
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        color: $brand-color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+.mobileLink {
+    float: right;
+    padding-top: 52px;
+    @media all and (max-width:1270px) {
+        display: block;
+    }
+    @media #{$small-down} {
+        padding-top: 28px;
+    }
+}
+.mainHeaderFix {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 10px;
+}
+.admin-bar {
+    .mainHeaderFix {
+        top: 32px;
+        @media screen and (max-width: 782px) {
+            top: 46px;
+        }
+    }
+}
+.mainHeader,
+.mainHeaderFix {
+    @media #{$small-up} {
+        height: 120px;
+        padding: 0 20px;
+        .gRow {
+            height: 120px;
+        }
+    }
+    @media #{$small-down} {
+        height: 73px;
+        padding: 0 10px;
+        .gRow {
+            height: 73px;
+        }
+    }
+}

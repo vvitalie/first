@@ -1,0 +1,326 @@
+#gform_widget-2 {
+    @media screen and (min-width: 768px) {
+        text-align: center;
+        > * {
+            max-width: 500px;
+        }
+        .widget-title {
+            display: block;
+            max-width: none;
+        }
+    }
+    @media screen and (max-width: 1024px) and (min-width: 767px) {
+        text-align: center;
+        > * {
+            max-width: 500px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .widget-title {
+            display: block;
+            max-width: none;
+        }
+    }
+    .gfield_label {
+        display: none;
+    }
+    .button {
+        display: block;
+        padding: 20px;
+        line-height: 1;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+#gform_wrapper_1 {
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 40px;
+    }
+    .button {
+        display: block;
+        padding: 20px;
+        line-height: 1;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: $font-main;
+    }
+    textarea {
+        min-height: 272px;
+        height: 272px;
+    }
+}
+$input-background: #fff;
+$input-border: 1px solid #a1a1a1;
+$input-color: $brand-color-gray;
+$input-size: 17px;
+$input-placeholder: #9a9a9a;
+$input-weight: 300;
+
+.two-column_wrapper {
+    .gform_body {
+        &::after {
+            @include clear();
+        }
+    }
+}
+
+.gform_wrapper {
+    .dk-selected {
+        border: $input-border;
+        background: $input-background;
+        border-radius: 2px;
+        padding: 0 20px;
+        font-family: $font-main;
+        font-weight: $input-weight;
+        font-size: $input-size;
+        &::before {
+            border: 0;
+            font-family: 'FontAwesome';
+            color: #f9cb01;
+            width: 17px;
+            height: 17px;
+            font-size: 17px;
+            content: "\f078";
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 20px;
+            display: block;
+            line-height: 1;
+        }
+        &.gf_placeholder {
+            color: #9a9a9a;
+        }
+    }
+    .dk-selected:after {
+        border-left: 0;
+    }
+    .dk-select-open-up .dk-select-options, .dk-select-open-down .dk-select-options, .dk-select-multi:focus .dk-select-options {
+        border: $input-border;
+        background: $input-background;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px;
+    }
+    .dk-select-options {
+        .dk-option-highlight,
+        .dk-option-selected {
+            background: $brand-color-primary;
+            color: $brand-color-secondary;
+        }
+    }
+    .validation_error {
+        border: 1px solid #ed1c24;
+        padding: 10px;
+        background: #FFCCCC;
+        color: #ed1c24;
+        font-size: 14px;
+        line-height: 1.3em;
+        margin-bottom: 22px;
+    }
+    .gform_page_footer {
+        &::after {
+            @include clear();
+        }
+    }
+    .gform_previous_button {
+        min-width: 175px;
+        float: left;
+    }
+    .gform_next_button {
+        min-width: 175px;
+        float: right;
+    }
+    .stepForm {
+        .gform_button {
+            min-width: 175px;
+            float: right;
+        }
+    }
+    table.gsurvey-likert {
+        tr:nth-child(odd) .gsurvey-likert-row-label,
+        td.gsurvey-likert-row-label,
+        th.gsurvey-likert-choice-label {
+            font-size: 16px;
+            font-weight: 300;
+            background: #fff;
+        }
+        td {
+            cursor: pointer;
+            &.gsurvey-likert-choice {
+                &.gsurvey-likert-selected,
+                &.gsurvey-likert-hover,
+                &.gsurvey-likert-focus {
+                    background-color: #556785!important;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .gform_body {
+        .gform_fields {
+            .gfield.gfield_error {
+                .ginput_container {
+                    input[type=text],
+                    input[type=email],
+                    input[type=tel],
+                    input[type=number],
+                    textarea,
+                    .dk-selected {
+                        border-color: #ed1c24;
+                    }
+                }
+            }
+            .gfield {
+                &.field_description_above {
+                    .gfield_label {
+                        font-size: 18px;
+                        font-weight: 300;
+                        padding-bottom: 16px;
+                    }
+                }
+                .clear-multi {
+                    margin: 0 -10px;
+                    &::after {
+                        @include clear();
+                    }
+                    .ginput_container_date {
+                        width: 33.33333%;
+                        padding: 0 10px;
+                        float: left;
+                        @media screen and (max-width: 479px) {
+                            float: none;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                .gfield_checkbox {
+                    > li {
+                        position: relative;
+                        label {
+                            display: inline-block;
+                            vertical-align: top;
+                            padding-left: 20px;
+                        }
+                        input[type=checkbox] {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+                .gfield_label {
+                    padding-bottom: 7px;
+                }
+                .gfield_description {
+                    padding-bottom: 16px;
+                }
+                .ginput_container {
+                    padding-bottom: 20px;
+                    &.ginput_container_checkbox,
+                    &.ginput_container_radio {
+                        li {
+                            position: relative;
+                            display: block;
+                            margin-bottom: 16px;
+                            line-height: 20px;
+                        }
+                        input[type=checkbox] ~ label,
+                        input[type=radio] ~ label {
+                            color: #858585;
+                            font-weight: 300;
+                            font-size: 16px;
+                            line-height: 20px;
+                            padding-left: 36px;
+                            display: inline-block;
+                            vertical-align: top;
+                            cursor: pointer;
+                            &::after {
+                                @include position-absolute(left, 0, top, 0);
+                                content: '';
+                                border: 1px solid #a1a1a1;
+                                border-radius: 100%;
+                                background: #fff;
+                                width: 20px;
+                                height: 20px;
+                                display: block;
+                            }
+                        }
+                        input[type=checkbox] ~ label::after {
+                            border-radius: 3px;
+                        }
+                        input[type=checkbox],
+                        input[type=radio] {
+                            @include position-absolute(left, -9999px, top, 0);
+                            &:checked ~ label::after {
+                                background: #556785;
+                                border-color: #19325b;
+                            }
+                        }
+                    }
+                    input[type=text],
+                    input[type=email],
+                    input[type=number],
+                    input[type=tel],
+                    textarea {
+                        @include animate(300ms, border-color);
+                        @include placeholder($input-placeholder, $input-size, 600);
+                        border: $input-border;
+                        background: $input-background;
+                        color: $input-color;
+                        font-size: $input-size;
+                        font-family: $font-main;
+                        font-weight: $input-weight;
+                        line-height: 22px;
+                        padding: 13px 20px;
+                        border-radius: 2px;
+                        &:focus {
+                            border: $input-border;
+                        }
+                    }
+                    textarea {
+                        min-height: 194px;
+                        height: 194px;
+                    }
+                    input[type=checkbox],
+                    input[type=radio] {
+                        width: auto;
+                    }
+                    input[type=text],
+                    input[type=email],
+                    input[type=number],
+                    input[type=tel],
+                    textarea {
+                        height: 50px;
+                        background: #fff!important;
+                        @media screen and (max-width: 479px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+img[id^="__lpform_input_"] {
+    display: none!important;
+}
+.ginput_container_post_image {
+    position: relative;
+    display: block;
+    padding-bottom: 10px!important;
+    cursor: pointer;
+    input {
+        @include position-absolute(left, 0 , top, 0);
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+    }
+}
